@@ -2,7 +2,6 @@
 #include <iostream>
 #include <assert.h>
 #include "object.h"
-#include "string.h"
 #include "queue.h"
 
 void println(const char* value) {
@@ -58,6 +57,20 @@ void test_string() {
 
 void test_queue() {
   println("---- Testing Queue ----");
+  Queue* q0 = new Queue();
+  Object* o = new Object();
+  Object* p = new Object();
+  Object* q = new Object();
+  q0->enqueue(o);
+  q0->enqueue(p);
+  assert(q0->dequeue()->equals(o));
+  q0->enqueue(q);
+  assert(q0->dequeue()->equals(p));
+  q0->enqueue(p);
+  q0->enqueue(o);
+  assert(!q0->is_empty());
+  assert(q0->size() == 3);
+
   Queue* q1 = new Queue();
   String* a = new String("A");
   String* b = new String("B");
@@ -89,6 +102,7 @@ void test_queue() {
   assert(q3->is_empty());
 
   delete a;
+  delete q0;
   delete q1;
   delete q2;
   delete q3;
@@ -97,6 +111,5 @@ void test_queue() {
 
 int main() {
   test_object();
-  test_string();
   test_queue();
 }
