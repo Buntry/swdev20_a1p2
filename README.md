@@ -31,3 +31,6 @@ there is one). We assume this will be a nullptr if the Queue is empty.
 
 Notes:
 Efficiency is key here. To enqueue or dequeue should be constant time.
+
+General Notes:
+We included a String class purely for our tests with Queue. Feel free to use your own String class, as long as it inherits from Object.
