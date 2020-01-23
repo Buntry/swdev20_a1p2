@@ -111,5 +111,6 @@ void test_queue() {
 
 int main() {
   test_object();
+  test_string();
   test_queue();
 }

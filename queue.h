@@ -2,7 +2,7 @@
 #include "object.h"
 
 /**
- * @brief Represents a FILO queue for containing objects.
+ * @brief Represents a FIFO queue for containing objects.
  * 
  */
 class Queue : public Object {

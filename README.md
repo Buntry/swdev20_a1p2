@@ -18,10 +18,10 @@ We separate computing the hashcode from returning the hashcode, so that
 the result can be memoized.
 
 # Queue
-A Queue represents a FILO (First-in-Last-out) sequence of storing data.
+A Queue represents a FIFO (First-in-First-out) sequence of storing data.
 
 Goals:
-1. Maintain the invariant of FILO with its interface. That means you can
+1. Maintain the invariant of FIFO with its interface. That means you can
 only interact with a Queue by enqueueing and dequeueing.
 2. Allow for easy interaction in cases where the Queue is empty. This
 means it should be easy to check how many elements are in the queue or
