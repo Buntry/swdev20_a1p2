@@ -1,6 +1,5 @@
 //lang:CwC
 #pragma once
-#include "string.h"
 
 /**
  * @brief Represents a basic object.
@@ -8,9 +7,6 @@
  */
 class Object {
   public:
-    // Holds the memoized hashcode after it is computed.
-    unsigned long hash_;
-
     /**
      * @brief Constructs a new Object.
      */
@@ -42,12 +38,4 @@ class Object {
      * @brief Computes the hashcode.
      */
     virtual void compute_hash();
-
-    /**
-     * @brief Returns a string representation of this object.
-     * In practice, this will allow for easy inspection during debugging.
-     * 
-     * @return String& 
-     */
-    virtual String& to_string();
 };

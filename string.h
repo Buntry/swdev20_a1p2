@@ -7,10 +7,6 @@
  */
 class String : public Object {
   public:
-    // Holds the value and length respectively of the sequence.
-    const char* value_;
-    unsigned long length_;
-
     /**
      * @brief Constructs a new empty String object.
      * Calls Object's constructor.
@@ -62,24 +58,6 @@ class String : public Object {
      * @return String& 
      */
     String* concat(String& that);
-
-    /**
-     * @brief Returns the substring found within the given bounds. 
-     * 
-     * @param start         <length()
-     * @param end           <length()
-     * @return String& 
-     */
-    String* substring(unsigned long start, unsigned long end);
-
-    /**
-     * @brief Finds the first occurrence of the given substring. 
-     * Returns >length() if it cannot find it.
-     * 
-     * @param that 
-     * @return unsigned long 
-     */
-    unsigned long find(String& that);
     
     /**
      * @brief Determines whether this string is equal to the given object.
