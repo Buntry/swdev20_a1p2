@@ -9,30 +9,6 @@ void println(const char* value) {
   std::cout << value << std::endl;
 }
 
-void test_object() {
-  println("test_object pending");
-  Object* o1 = new Object();
-  assert(o1->equals(o1));
-  Object* o2 = new Object();
-  assert(!o2->equals(o1));
-  assert(o2->hash() != 0);
-  assert(o2->hash() != o1->hash());
-  delete o1;
-  delete o2;
-  println("test_object passed");
-}
-
-void test_string() {
-  println("test_string pending");
-  String* s1 = new String("Foo");
-  String* s2 = new String("Bar");
-  assert(!s1->equals(s2));
-  String* s3 = new String("Bar");
-  assert(s2->equals(s3));
-  assert(s2->hash() == s3->hash());
-  println("test_string passed");
-}
-
 void test_queue_constructor_destructor() {
   println("test_queue_constructor pending");
   Queue* q = new Queue();
@@ -277,8 +253,6 @@ void test_strqueue_complex() {
 }
 
 int main() {
-  test_object();
-
   test_queue_constructor_destructor();
   test_queue_enqueue();
   test_queue_dequeue();
