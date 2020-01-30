@@ -48,7 +48,7 @@ void test_queue_peek() {
   Object* o = new Object();
   q->enqueue(o);
   assert(q->size() == 1);
-  assert(o->equals(q->peek())); 
+  assert(o->equals(q->peek()));
   q->dequeue();
   assert(q->peek() == nullptr);
   delete o;
@@ -109,7 +109,6 @@ void test_queue_equality() {
   q2->enqueue(o1);
   assert(q1->equals(q2));
   delete q1;
-  delete q2;
   println("test_queue_equality passed");
 }
 
@@ -168,7 +167,7 @@ void test_strqueue_peek() {
   String* s = new String("Look ma! No hands");
   q->enqueue(s);
   assert(q->size() == 1);
-  assert(s->equals(q->peek())); 
+  assert(s->equals(q->peek()));
   q->dequeue();
   assert(q->peek() == nullptr);
   delete s;
@@ -232,7 +231,6 @@ void test_strqueue_equality() {
   assert(q1->equals(q2));
 
   delete q1;
-  delete q2;
   println("test_strqueue_equality passed");
 }
 
