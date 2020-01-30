@@ -88,7 +88,7 @@ void test_queue_size() {
     q->enqueue(new Object());
   }
   for (uint i = 100; i > 0; i--) {
-    assert(q->size() == (i - 1));
+    assert(q->size() == i);
     delete q->dequeue();
   }
   assert(q->size() == 0);
@@ -208,7 +208,7 @@ void test_strqueue_size() {
     q->enqueue(new String());
   }
   for (uint i = 100; i > 0; i--) {
-    assert(q->size() == (i - 1));
+    assert(q->size() == i);
     delete q->dequeue();
   }
   assert(q->size() == 0);
