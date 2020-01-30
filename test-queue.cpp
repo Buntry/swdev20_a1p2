@@ -108,7 +108,9 @@ void test_queue_equality() {
   assert(!q1->equals(q2));
   q2->enqueue(o1);
   assert(q1->equals(q2));
+  q2->dequeue();
   delete q1;
+  delete q2;
   println("test_queue_equality passed");
 }
 
@@ -229,8 +231,8 @@ void test_strqueue_equality() {
   delete q2->dequeue();
   q2->enqueue(new String("Foo"));
   assert(q1->equals(q2));
-
   delete q1;
+  delete q2;
   println("test_strqueue_equality passed");
 }
 
